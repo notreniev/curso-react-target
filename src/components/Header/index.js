@@ -1,33 +1,26 @@
 import React from "react";
-import { Icon } from "../Icon";
+
+import { Menu } from "../Menu";
+
 import { Container, ContainerTitle, Title, Subtitle } from "./styles";
 
-function Header() {
-  return (
-    <>
-      <Container>
-        <ContainerTitle>
-          <Title>Pokedex</Title>
-          <Subtitle>Procure por pokémons pelo nome ou região</Subtitle>
-        </ContainerTitle>
-        <Search />
-        <Icon name="coffee" />
-      </Container>
-    </>
-  );
-}
+// Criar componente de Botão => 3 props
+// Ícone(opcional)
+// Conteúdo desse botão
+// cor => cor padrão, primary, secundary, success, error
 
-function Search() {
-  const [pokemonName, setPokemonName] = React.useState("");
-  return (
-    <div>
-      <input
-        placeholder="Nome do pokémon"
-        value={pokemonName}
-        onChange={(e) => setPokemonName(e.target.value)}
-      />
-    </div>
-  );
+// Menu => Sobre, Logout, Home, Gerações
+
+function Header() {
+	return (
+		<Container>
+			<ContainerTitle>
+				<Title>Pokédex</Title>
+				<Subtitle>Procure por pokémons pelo nome ou região</Subtitle>
+			</ContainerTitle>
+			<Menu />
+		</Container>
+	);
 }
 
 export { Header };

@@ -2,3 +2,8 @@ export * from "./Header";
 export * from "./Main";
 export * from "./Footer";
 export * from "./Icon";
+export * from "./Menu";
+export * from "./Button";
+export * from "./Home";
+export * from "./Geracoes";
+export * from "./Sobre";

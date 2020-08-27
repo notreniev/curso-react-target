@@ -1,8 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Icon({ name }) {
-  return <FontAwesomeIcon icon={name} />;
+import { Container } from "./styles";
+
+function Icon({ name, color = "#fff" }) {
+	return (
+		<Container>
+			<FontAwesomeIcon icon={name} color={color} />
+		</Container>
+	);
 }
 
 export { Icon };
