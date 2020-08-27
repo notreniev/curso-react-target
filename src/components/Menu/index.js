@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "../Button";
-import { Container } from "./styles";
 import { icons } from "../../utils/icons";
 import { Link } from "react-router-dom";
+import { Container } from "./styles";
 
 function Menu({}) {
 	const buttons = [
