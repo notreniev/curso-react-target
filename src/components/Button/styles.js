@@ -6,8 +6,8 @@ export const Container = styled.div`
 	justify-content: center;
 	border-radius: 5px;
 	cursor: pointer;
-	width: 100px;
-	height: 100%;
+	min-width: 100px;
+	min-height: 50px;
 `;
 
 export const ButtonText = styled.span`
