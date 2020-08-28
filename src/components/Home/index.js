@@ -1,6 +1,5 @@
 import React from "react";
 import { getInitialPokemons, api } from "../../services/api";
-import { Card } from "../Card";
 import { Wrapper, PokeInfo } from "./styles";
 
 function Home() {
@@ -12,6 +11,17 @@ function Home() {
 		{ number: "004", name: "Charmander", types: ["fire"] },
 		{ number: "007", name: "Squirtle", types: ["water"] },
 	];
+
+	const setOrder = (property) => {
+		return function (a, b) {
+			if (a[property] < b[property]) {
+				return 1;
+			} else if (a[property] > b[property]) {
+				return -1;
+			}
+			return 0;
+		};
+	};
 
 	React.useEffect(() => {
 		async function getPokes() {
@@ -30,6 +40,7 @@ function Home() {
 					};
 
 					updatedPokemons.push(uniquePoke);
+					updatedPokemons.sort(setOrder(uniquePoke.id));
 
 					if (index === 2) {
 						setPokemons(updatedPokemons);
